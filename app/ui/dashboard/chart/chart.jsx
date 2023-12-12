@@ -1,47 +1,49 @@
+'use client';
+
+import styles from './chart.module.css';
 import {
-  Legend,
-  Line,
   LineChart,
-  ResponsiveContainer,
-  Tooltip,
+  Line,
   XAxis,
   YAxis,
-} from "recharts";
-import styles from "./chart.module.css";
+  Tooltip,
+  Legend,
+  ResponsiveContainer,
+} from 'recharts';
 
 const data = [
   {
-    name: "Sun",
+    name: 'Sun',
     visit: 4000,
     click: 2400,
   },
   {
-    name: "Mon",
+    name: 'Mon',
     visit: 3000,
     click: 1398,
   },
   {
-    name: "Tue",
+    name: 'Tue',
     visit: 2000,
     click: 3800,
   },
   {
-    name: "Wed",
+    name: 'Wed',
     visit: 2780,
     click: 3908,
   },
   {
-    name: "Thu",
+    name: 'Thu',
     visit: 1890,
     click: 4800,
   },
   {
-    name: "Fri",
+    name: 'Fri',
     visit: 2390,
     click: 3800,
   },
   {
-    name: "Sat",
+    name: 'Sat',
     visit: 3490,
     click: 4300,
   },
@@ -50,7 +52,7 @@ const data = [
 const Chart = () => {
   return (
     <div className={styles.container}>
-      <h2>Weekly Recap</h2>
+      <h2 className={styles.title}>Weekly Recap</h2>
       <ResponsiveContainer width="100%" height="90%">
         <LineChart
           width={500}
@@ -65,7 +67,7 @@ const Chart = () => {
         >
           <XAxis dataKey="name" />
           <YAxis />
-          <Tooltip contentStyle={{ background: "#151c2c", border: "none" }} />
+          <Tooltip contentStyle={{ background: '#151c2c', border: 'none' }} />
           <Legend />
           <Line
             type="monotone"

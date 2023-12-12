@@ -1,5 +1,5 @@
-import Image from "next/image";
-import styles from "./transactions.module.css";
+import Image from 'next/image';
+import styles from './transactions.module.css';
 
 const Transactions = () => {
   return (
@@ -25,10 +25,14 @@ const Transactions = () => {
                   height={40}
                   className={styles.userImage}
                 />
-                Hamid Tabrizi
+                John Doe
               </div>
             </td>
-            <td className={`${styles.status} ${styles.pending}`}>Pending</td>
+            <td>
+              <span className={`${styles.status} ${styles.pending}`}>
+                Pending
+              </span>
+            </td>
             <td>14.02.2024</td>
             <td>$3.200</td>
           </tr>
@@ -42,10 +46,12 @@ const Transactions = () => {
                   height={40}
                   className={styles.userImage}
                 />
-                Hamid Tabrizi
+                John Doe
               </div>
             </td>
-            <td className={`${styles.status} ${styles.done}`}>Done</td>
+            <td>
+              <span className={`${styles.status} ${styles.done}`}>Done</span>
+            </td>
             <td>14.02.2024</td>
             <td>$3.200</td>
           </tr>
@@ -59,10 +65,35 @@ const Transactions = () => {
                   height={40}
                   className={styles.userImage}
                 />
-                Hamid Tabrizi
+                John Doe
               </div>
             </td>
-            <td className={`${styles.status} ${styles.canceled}`}>Canceled</td>
+            <td>
+              <span className={`${styles.status} ${styles.canceled}`}>
+                Cancelled
+              </span>
+            </td>
+            <td>14.02.2024</td>
+            <td>$3.200</td>
+          </tr>
+          <tr>
+            <td>
+              <div className={styles.user}>
+                <Image
+                  src="/noavatar.png"
+                  alt=""
+                  width={40}
+                  height={40}
+                  className={styles.userImage}
+                />
+                John Doe
+              </div>
+            </td>
+            <td>
+              <span className={`${styles.status} ${styles.pending}`}>
+                Pending
+              </span>
+            </td>
             <td>14.02.2024</td>
             <td>$3.200</td>
           </tr>
